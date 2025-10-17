@@ -1,0 +1,30 @@
+{
+  "login": {
+    "name": "Jennifer Aniston",
+    "email": "jennifer@gmail.com",
+    "password": "senha123"
+ },
+  "inv_pass": {
+    "email": "jennifer@ygmail.com.br",
+    "password": "senha12345"
+ },
+  "inv_email": {
+    "email": "404@gmail.com",
+    "password": "senha123"
+ },
+  "create": {
+    "name": "Isadora Aureliano de Araújo",
+    "email": "isadoraraujo13@gmail.com",
+    "password": "senha123"
+  },
+  "duplicated": {
+    "name": "James Gunn",
+    "email": "james@hotmail.com",
+    "password": "senha123"
+  },
+  "required": {
+    "name": "Margot Robbie",
+    "email": "margot@gmail.com",
+    "password": "senha123"
+  }
+}
