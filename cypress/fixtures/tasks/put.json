@@ -1,0 +1,26 @@
+{
+    "update": {
+        "user": {
+            "name": "Harley Quinn",
+            "email": "harley@gmail.com",
+            "password": "senha123"
+        },
+        "task": {
+            "name": "Ir para Arkham",
+            "tags": [
+                "dc",
+                "alerquina"
+            ]
+        }
+    },
+    "not_found": {
+        "user": {
+            "name": "Steve Woz",
+            "email": "woz@gmail.com",
+            "password": "senha123"
+        },
+        "task": {
+            "name": "Construir o Apple I"
+        }
+    }
+}

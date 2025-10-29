@@ -1,0 +1,52 @@
+{
+    "list": {
+        "user": {
+            "name": "Charles Xavier",
+            "email": "xavier@gmail.com",
+            "password": "senha123"
+        },
+        "tasks": [
+            {
+                "name": "Estudar Javascript"
+            },
+            {
+                "name": "Ler um livro de astronomia",
+                "tags": [
+                    "space"
+                ]
+            },
+            {
+                "name": "Estudar cypress api",
+                "tags": [
+                    "QAx",
+                    "node.js"
+                ]
+            }
+        ]
+    },
+    "unique": {
+        "user": {
+            "name": "Tony Stark",
+            "email": "tony@stark.com",
+            "password": "senha123"
+        },
+        "task": {
+            "name": "Construir a Mark87",
+            "tags": [
+                "ark",
+                "nanotech",
+                "friday"
+            ]
+        }
+    },
+    "not_found": {
+        "user": {
+            "name": "Bruce Banner",
+            "email": "hulk@stark.com",
+            "password": "senha123"
+        },
+        "task": {
+            "name": "Construir uma máquina de radiação gama"
+        }
+    }
+}

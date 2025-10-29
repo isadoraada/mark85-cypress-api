@@ -1,0 +1,26 @@
+{
+    "create": {
+        "user": {
+            "name": "Fernando Silva",
+            "email": "fernando.silva@gmail.com",
+            "password": "senha123"
+        }, 
+        "task": {
+            "name": "Estudar para provas finais",
+            "tags": [
+                "estudos",
+                "importante"
+            ]
+        }
+    },
+    "dup": {
+        "user": {
+            "name": "Jean Grey",
+            "email": "fenix@gmail.com",
+            "password": "senha123"
+        }, 
+        "task": {
+            "name": "Fazer compras no mercado"
+        }
+    }
+}

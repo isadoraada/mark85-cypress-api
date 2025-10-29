@@ -1,14 +1,14 @@
 describe('POST /sessions', () => {
-    it('User session', function() {
-        beforeEach(function () {
-            cy.fixture('users').then(function(users) {
-                this.users = users
-            })
+    beforeEach(function () {
+        cy.fixture('users').then(function(users) {
+            this.users = users
         })
+    })
 
+    it('User session', function() {
         const userData = this.users.login
 
-        cy.task('deleteUser', userData.email)
+        cy.task('removeUser', userData.email)
 
         cy.postUser(userData)
 
@@ -47,13 +47,4 @@ describe('POST /sessions', () => {
                 expect(response.status).to.eq(401)
             })
     })
-})
-
-Cypress.Commands.add('postSession', function(user) {
-    cy.api({
-        url: '/sessions',
-        method: 'POST',
-        body: { email: user.email, password: user.password },
-        failOnStatusCode: false
-    }).then((response => { return response }))
 })
