@@ -16,8 +16,11 @@
   "author": "Isadora Araújo",
   "license": "ISC",
   "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.41.2",
+    "allure-commandline": "^2.34.1",
     "cypress": "^15.4.0",
-    "cypress-plugin-api": "^2.11.2"
+    "cypress-plugin-api": "^2.11.2",
+    "dotenv": "^17.2.3"
   },
   "dependencies": {
     "mongodb": "^6.20.0"

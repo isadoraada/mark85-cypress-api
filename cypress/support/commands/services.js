@@ -82,3 +82,4 @@ Cypress.Commands.add('putTaskDone', (taskId, token) => {
         return response
     })
 })
+

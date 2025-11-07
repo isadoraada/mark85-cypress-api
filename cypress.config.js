@@ -1,17 +1,20 @@
 const { defineConfig } = require("cypress");
-
 const { connect } = require('./cypress/support/mongo')
+
+const allureWriter = require('@shelex/cypress-allure-plugin/writer');
+
+require('dotenv').config()
 
 module.exports = defineConfig({
   e2e: {
     async setupNodeEvents(on, config) {
-      // implement node event listeners here
+      allureWriter(on, config);
+
       let db = await connect()
 
       on('task', {
         async removeUser(email) {
           try {
-            // Reconectar se necessário
             if (!db) {
               db = await connect()
             }
@@ -39,15 +42,15 @@ module.exports = defineConfig({
             }
             const users = db.collection('users')
             const user = await users.findOne({ email: emailUser })
-            
+
             if (!user) {
               console.log(`Usuário não encontrado: ${emailUser}`)
               return null
             }
-            
+
             const tasks = db.collection('tasks')
             await tasks.deleteMany({
-              name: taskName, 
+              name: taskName,
               user: user._id
             })
             return null
@@ -68,7 +71,17 @@ module.exports = defineConfig({
           return null
         }
       })
+
+      return config
     },
-    baseUrl: 'http://localhost:3333'
+    baseUrl: process.env.BASE_URL,
+    video: false,
+    screenshotOnRunFailure: false,
+    env: {
+      amqpHost: process.env.AMQP_HOST,
+      amqpQueue: process.env.AMQP_QUEUE,
+      amqpToken: process.env.AMQP_TOKEN,
+      allure: true
+    }
   },
 });
